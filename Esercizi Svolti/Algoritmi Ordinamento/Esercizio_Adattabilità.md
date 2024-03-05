@@ -4,19 +4,23 @@ Per svolgere l'esercizio, analizzeremo passo dopo passo come Insertion Sort e Bu
 
 **Procedimento**:
 - Inizia da `i = 1` (secondo elemento dell'array), poiché il primo elemento è considerato già ordinato.
-- Confronta l'elemento corrente con quelli prima di esso, spostandoli di una posizione verso destra finché non trova la posizione corretta per l'elemento corrente.
+- Confronta l'elemento corrente con quelli prima di esso, spostandoli di una posizione verso sinistra finché non trova la posizione corretta per l'elemento corrente.
 - Ripete il processo per ogni elemento fino alla fine dell'array.
 
 **Analisi Passo-Passo**:
 
 - \(A = [2, 3, 5, 7, 8, 6, 4, 9]\) - inizio, nessun confronto/scambio per il primo elemento.
-- \([2, 3, 5, 7, 8, 6, 4, 9]\) - \(6\) è confrontato con \(8\), poi con \(7\), \(5\), e \(3\) (4 confronti, 3 scambi) fino ad essere inserito nella posizione corretta.
+- \(A = [2, 3, 5, 7, 8, 6, 4, 9]\) - \(3\) viene confrontato con \(2\), posizione corretta (1 confronto)
+- \(A = [2, 3, 5, 7, 8, 6, 4, 9]\) - \(5\) viene confrontato con \(3\), posizione corretta (1 confronto)
+- \(A = [2, 3, 5, 7, 8, 6, 4, 9]\) - \(7\) viene confrontato con \(8\), posizione corretta (1 confronto)
+- \(A = [2, 3, 5, 7, 8, 6, 4, 9]\) - \(8\) viene confrontato con \(7\), posizione corretta (1 confronto)
+- \([2, 3, 5, 7, 8, 6, 4, 9]\) - \(6\) è confrontato con \(8\), poi con \(7\), \(5\) (3 confronti, 2 scambi) fino ad essere inserito nella posizione corretta.
 - \([2, 3, 5, 6, 7, 8, 4, 9]\) - \(4\) è confrontato con \(8\), poi con \(7\), \(6\), \(5\), e \(3\) (5 confronti, 4 scambi) fino ad essere inserito nella posizione corretta.
 - \([2, 3, 4, 5, 6, 7, 8, 9]\) - \(9\) è confrontato solo con \(8\) (1 confronto, 0 scambi) e lasciato nella sua posizione.
 
 **Calcolo dei Confronti e Scambi**:
-- **Confronti**: \(4 + 5 + 1 = 10\)
-- **Scambi**: \(3 + 4 + 0 = 7\)
+- **Confronti**: \(13\)
+- **Scambi**: \(6\)
 
 ### Parte 2: Bubble Sort
 
