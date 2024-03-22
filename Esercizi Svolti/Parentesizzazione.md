@@ -6,11 +6,11 @@ Nel tuo esercizio, la sequenza di dimensioni delle matrici è data come \( <2, 2
 
 La soluzione è costruita progressivamente calcolando il numero minimo di moltiplicazioni necessarie per tutte le possibili catene di lunghezza 2, poi di lunghezza 3, e così via fino alla lunghezza completa della catena. Questo viene fatto utilizzando la seguente formula ricorsiva:
 
-$
+$$
 \[
 M[i,j] = \min_{i \leq k < j} (M[i,k] + M[k+1,j] + p_{i-1} \cdot p_k \cdot p_j)
 \]
-$
+$$
 
 dove \( p_i \) è la dimensione delle righe della i-esima matrice e \( p_j \) è la dimensione delle colonne della j-esima matrice nella catena di moltiplicazione.
 
