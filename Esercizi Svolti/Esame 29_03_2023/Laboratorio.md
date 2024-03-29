@@ -1,5 +1,3 @@
-Fornirò gli pseudocodi per gli algoritmi di ordinamento HeapSort e CountingSort, inclusi i codici delle procedure ausiliarie necessarie. Inoltre, discuterò la loro complessità computazionale.
-
 ### HeapSort
 
 HeapSort è un algoritmo di ordinamento basato sulla struttura dati dell'heap (un particolare tipo di albero binario). Si compone di due fasi principali: la costruzione di un heap e il processo di estrazione dei massimi per ottenere l'array ordinato.
