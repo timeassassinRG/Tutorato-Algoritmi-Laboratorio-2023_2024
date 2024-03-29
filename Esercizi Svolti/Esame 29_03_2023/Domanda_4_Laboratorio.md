@@ -7,8 +7,8 @@ HeapSort è un algoritmo di ordinamento basato sulla struttura dati dell'heap (u
 ```c
 // Procedura per costruire un heap da un array
 HEAPIFY(A, i, heapSize) {
-    left = 2*i + 1
-    right = 2*i + 2
+    left = 2*i
+    right = 2*i + 1
     largest = i
     
     if left < heapSize and A[left] > A[largest]

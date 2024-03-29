@@ -33,8 +33,8 @@ def generate_partially_sorted_array(size, disorder_level):
     return list(arr)
 
 # Parametri dell'esperimento
-sizes = np.arange(100, 10001, 100) # Da 100 a 10000 con step 100
-disorder_level = 0.05
+sizes = np.arange(100, 5001, 100) # Da 100 a 10000 con step 100
+disorder_level = 0
 n_experiments = 1 # Numero di esperimenti per dimensione
 
 # Variabili per memorizzare i risultati

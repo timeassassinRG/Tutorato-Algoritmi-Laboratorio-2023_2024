@@ -7,7 +7,7 @@
 2. **Bellman-Ford**
    - **Limiti applicativi**: L'algoritmo di Bellman-Ford gestisce pesi negativi e può rilevare cicli di peso negativo nel grafo. È più versatile rispetto a Dijkstra ma generalmente più lento.
    - **Complessità asintotica**:
-     - Sia con **matrice di adiacenza** che con **lista di adiacenza**: \(O(V \cdot E)\).
+     - Sia con **matrice di adiacenza** che con **lista di adiacenza**: \(O(V*E)\).
 
 3. **DAG Shortest Path**
    - **Limiti applicativi**: Questo algoritmo si applica solo ai grafi diretti aciclici (DAG). È molto efficiente in questo contesto poiché sfrutta l'assenza di cicli per ottimizzare il calcolo dei cammini minimi.
