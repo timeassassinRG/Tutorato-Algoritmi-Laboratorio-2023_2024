@@ -18,7 +18,7 @@ HEAPIFY(A, i, heapSize) {
     
     if largest != i {
         swap(A[i], A[largest])
-        HEAPIFY(A, largest, heapSize)
+        HEAPIFY(A, largest, heapSize) // Elemento di ricorsione
     }
 }
 
@@ -27,12 +27,12 @@ HEAPSORT(A) {
     heapSize = length(A)
     
     // Costruzione dell'heap
-    for i = heapSize / 2 - 1 downto 0
+    for i = heapSize / 2 - 1 downto 0 // BuildMaxHeap(A)
         HEAPIFY(A, i, heapSize)
     
-    // Estrazione degli elementi dall'heap
+    // Estrazione degli elementi dall'heap 
     for i = heapSize - 1 downto 1 {
-        swap(A[0], A[i])
+        swap(A[0], A[i])    //Extract-Max
         HEAPIFY(A, 0, i)
     }
 }
@@ -40,7 +40,7 @@ HEAPSORT(A) {
 
 #### Complessità Computazionale
 
-- **Costruzione dell'heap**: \(O(n)\), dove \(n\) è il numero di elementi nell'array.
+- **Costruzione dell'heap**: \(O(n log n)\), dove \(n\) è il numero di elementi nell'array.
 - **Estrazione degli elementi dall'heap**: \(O(n \log n)\) perché per ciascuno degli \(n-1\) elementi si effettua una chiamata a `HEAPIFY`, che ha complessità \(O(\log n)\).
 - **Complessità totale**: \(O(n \log n)\).
 
