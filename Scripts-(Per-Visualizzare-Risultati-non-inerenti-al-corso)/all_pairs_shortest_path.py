@@ -27,22 +27,29 @@ def faster_all_pairs_shortest_paths(W):
         m *= 2
     return L[m]
 
+def floyd_warshall(W):
+    n = W.shape[0]
+    D = np.array(W)  # Initialize D^(0) with the weight matrix W
+    for k in range(n):
+        D_new = np.copy(D)
+        for i in range(n):
+            for j in range(n):
+                D_new[i, j] = min(D[i, j], D[i, k] + D[k, j])
+        D = D_new  # Update D to D_new for the next iteration
+        print(D)
+        print()
+    return D
 
 inf = np.inf
 
 # Example usage
 W = np.array([
-    [0, 3, 8, inf, -4],
+    [0, 3 ,8, inf, -4],
     [inf, 0, inf, 1, 7],
     [inf, 4, 0, inf, inf],
     [2, inf, -5, 0, inf],
     [inf, inf, inf, 6, 0]
 ])
 
-slow_result = slow_all_pairs_shortest_paths(W)
-print("Slow All-Pairs Shortest Paths Result:")
-print(slow_result)
-
-faster_result = faster_all_pairs_shortest_paths(W)
-print("Faster All-Pairs Shortest Paths Result:")
-print(faster_result)
+result = floyd_warshall(W)
+print(result)
